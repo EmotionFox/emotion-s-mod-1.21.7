@@ -1,5 +1,7 @@
 package fr.emotion.emomod;
 
+import fr.emotion.emomod.init.BlockRegistry;
+import fr.emotion.emomod.init.ItemRegistry;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -34,6 +36,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(EmotionsMod.MODID)
 public class EmotionsMod {
+
     // Define mod id in a common place for everything to reference
     public static final String MODID = "emomod";
     // Directly reference a slf4j logger
@@ -68,6 +71,10 @@ public class EmotionsMod {
     public EmotionsMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        // Register all item from ItemRegistry
+        ItemRegistry.init(modEventBus);
+        BlockRegistry.init(modEventBus);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
