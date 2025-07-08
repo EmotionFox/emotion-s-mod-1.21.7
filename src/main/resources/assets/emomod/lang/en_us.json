@@ -1,0 +1,13 @@
+{
+  "itemGroup.emomod": "Example Mod Tab",
+  "block.emomod.example_block": "Example Block",
+  "item.emomod.example_item": "Example Item",
+
+  "emomod.configuration.title": "Emotion's Mod Configs",
+  "emomod.configuration.section.emomod.common.toml": "Emotion's Mod Configs",
+  "emomod.configuration.section.emomod.common.toml.title": "Emotion's Mod Configs",
+  "emomod.configuration.items": "Item List",
+  "emomod.configuration.logDirtBlock": "Log Dirt Block",
+  "emomod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "emomod.configuration.magicNumber": "Magic Number"
+}
