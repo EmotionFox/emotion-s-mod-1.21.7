@@ -6,7 +6,7 @@ Initialement développé intimement en 1.8 avec ma conjointe, le mod revient en 
 
 > 🔧 Actuellement en cours de portage et de reconstruction avec NeoForge.
 
-============
+---
 
 # ✨ À propos
 
@@ -25,7 +25,7 @@ Certaines de ses idées ont même fini par être intégrées dans le jeu officie
 
 Preuve de qualité et d'une certaine vision éclairée de ce que devait devenir Minecraft.
 
-============
+---
 
 # ⚙️ Fonctionnalités prévues
 
@@ -54,7 +54,7 @@ Voici un aperçu de ce que propose ou proposera le mod :
   - Nouveaux comportements du dispenser pour toujours plus d'automatisation 🔴, bagues magiques 💍.
   - Mobilier dont des chaises, des tables et des bancs 🪑.
 
-============
+---
 
 # ⚙️ Développement
 
@@ -68,20 +68,20 @@ Le mod est reconstruit proprement, en tenant compte des fonctionnalités désorm
   - `assets/emomod` : textures, modèles, sons...
   - `data/emomod` : loot tables, recettes, tags, advancements, etc.
 
-============
+---
 
 # 💬 Communauté & contribution
 
 Ce projet est personnel, mais les retours sont toujours les bienvenus !  
 Propositions d'idées, bug reports ou aide pour les versions futures ? Ouvrez une issue ou un pull request ✨
 
-============
+---
 
 # 📌 Objectif
 
 Revivre l’esprit original du mod avec une **base moderne, optimisée et modulaire**, pour jouer en solo ou à deux dans un Minecraft enrichi mais toujours cohérent avec le style vanilla, et dans l'idéal implémenter toujours plus de mes idées de base qui se sont perdues au fil des updates laborieuses.
 
-============
+---
 
 # 📜 Licence
 
