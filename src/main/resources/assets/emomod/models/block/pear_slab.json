@@ -1,8 +1,0 @@
-{
-    "parent": "block/slab",
-    "textures": {
-        "bottom": "emomod:block/planks_pear",
-        "top": "emomod:block/planks_pear",
-        "side": "emomod:block/planks_pear"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "variants": 
-    {
-        "facing=south": { "model": "emomod:block/box_window_blue_orchid" },
-        "facing=north": { "model": "emomod:block/box_window_blue_orchid", "y": 180 },
-        "facing=east":  { "model": "emomod:block/box_window_blue_orchid", "y": 270 },
-        "facing=west":  { "model": "emomod:block/box_window_blue_orchid", "y": 90 }
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "parent": "emomod:block/stone_table_ew",
-    "textures": 
-    {
-        "stone": "block/stone_bricks"
-    }
-}

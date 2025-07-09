@@ -1,8 +1,0 @@
-{
-    "parent": "block/door_bottom",
-    "textures": 
-    {
-        "bottom": "emomod:block/door_coco_lower",
-        "top": "emomod:block/door_coco_upper"
-    }
-}

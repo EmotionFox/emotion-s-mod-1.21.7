@@ -1,7 +1,0 @@
-{
-    "parent": "block/cross",
-    "textures": 
-    {
-        "cross": "emomod:block/plant_cherry_stage_6"
-    }
-}

@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "type=bottom": { "model": "emomod:block/cherry_slab" },
-        "type=top": { "model": "emomod:block/cherry_slab_top" },
-        "type=double": { "model": "emomod:block/planks_cherry" }
-    }
-}

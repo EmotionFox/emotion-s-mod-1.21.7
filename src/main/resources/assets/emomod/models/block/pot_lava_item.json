@@ -1,7 +1,0 @@
-{
-    "parent": "emomod:block/pot",
-    "textures": 
-    {
-        "type": "block/lava_still"
-    }
-}

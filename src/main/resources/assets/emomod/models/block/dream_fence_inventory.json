@@ -1,6 +1,0 @@
-{
-    "parent": "block/fence_inventory",
-    "textures": {
-        "texture": "emomod:block/planks_dream"
-    }
-}

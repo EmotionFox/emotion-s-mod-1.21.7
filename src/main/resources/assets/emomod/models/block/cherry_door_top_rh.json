@@ -1,8 +1,0 @@
-{
-    "parent": "block/door_top_rh",
-    "textures": 
-    {
-        "bottom": "emomod:block/door_cherry_lower",
-        "top": "emomod:block/door_cherry_upper"
-    }
-}

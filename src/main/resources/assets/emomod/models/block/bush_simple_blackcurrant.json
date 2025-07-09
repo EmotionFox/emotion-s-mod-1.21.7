@@ -1,8 +1,0 @@
-{
-    "parent": "emomod:block/bush",
-    "textures": 
-    {
-        "type": "emomod:block/bush_simple_blackcurrant",
-        "base": "emomod:block/bush_base_blackcurrant"
-    }
-}

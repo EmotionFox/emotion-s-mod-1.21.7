@@ -1,9 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": 
-    {
-        "bottom": "emomod:block/planks_coco",
-        "top": "emomod:block/planks_coco",
-        "side": "emomod:block/planks_coco"
-    }
-}

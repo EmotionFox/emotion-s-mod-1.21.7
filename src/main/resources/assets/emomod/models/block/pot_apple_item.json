@@ -1,7 +1,0 @@
-{
-    "parent": "emomod:block/pot",
-    "textures": 
-    {
-        "type": "emomod:block/pot_apple"
-    }
-}

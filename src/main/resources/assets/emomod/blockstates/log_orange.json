@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "axis=y":    { "model": "emomod:block/log_orange" },
-        "axis=z":     { "model": "emomod:block/log_orange", "x": 90 },
-        "axis=x":     { "model": "emomod:block/log_orange", "x": 90, "y": 90 }
-    }
-}

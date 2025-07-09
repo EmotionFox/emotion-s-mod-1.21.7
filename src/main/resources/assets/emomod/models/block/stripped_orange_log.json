@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures": 
-    {
-        "end": "emomod:block/stripped_orange_log_top",
-        "side": "emomod:block/stripped_orange_log"
-    }
-}
