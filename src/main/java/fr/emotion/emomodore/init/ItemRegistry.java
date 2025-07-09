@@ -6,7 +6,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -14,7 +13,7 @@ public class ItemRegistry {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MainRegistry.MODID);
 
     public static final ToolMaterial FOSSIL_MAT = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 172, 5.0F, 2.0F, 16, ItemTags.FOSSIL_TOOL_MATERIALS);
-    public static final ToolMaterial PURPURA_MAT = new ToolMaterial(fr.emotion.emomod.tags.BlockTags.INCORRECT_FOR_PURPURA_TOOL,  1750, 10.0F, 3.5F, 8, ItemTags.PURPURA_TOOL_MATERIALS);
+    public static final ToolMaterial PURPURA_MAT = new ToolMaterial(fr.emotion.emomodore.tags.BlockTags.INCORRECT_FOR_PURPURA_TOOL,  1750, 10.0F, 3.5F, 8, ItemTags.PURPURA_TOOL_MATERIALS);
 
     public static final DeferredItem<Item> PURPURA_SHARD = ITEMS.registerSimpleItem("purpura_shard");
 
