@@ -1,5 +1,6 @@
 package fr.emotion.emomodore;
 
+import fr.emotion.emomodore.init.BlockRegistry;
 import fr.emotion.emomodore.init.ItemRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceKey;
@@ -43,11 +44,27 @@ public class MainRegistryClient {
             event.accept(ItemRegistry.FOSSIL.get());
         }
         else if (key == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ItemRegistry.PURPURA_SWORD.get());
             event.accept(ItemRegistry.PURPURA_SHOVEL.get());
             event.accept(ItemRegistry.PURPURA_PICKAXE.get());
-            event.accept(ItemRegistry.PURPURA_AXE.get());
             event.accept(ItemRegistry.PURPURA_HOE.get());
+
+            event.accept(ItemRegistry.FOSSIL_SHOVEL.get());
+            event.accept(ItemRegistry.FOSSIL_PICKAXE.get());
+            event.accept(ItemRegistry.FOSSIL_HOE.get());
+        }
+        else if (key == CreativeModeTabs.COMBAT) {
+            event.accept(ItemRegistry.PURPURA_SWORD.get());
+            event.accept(ItemRegistry.PURPURA_AXE.get());
+
+            event.accept(ItemRegistry.FOSSIL_SWORD.get());
+            event.accept(ItemRegistry.FOSSIL_AXE.get());
+        }
+        else if (key == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(BlockRegistry.PURPURA_BLOCK.get());
+        }
+        else if (key == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(BlockRegistry.FOSSIL_ORE.get());
+            event.accept(BlockRegistry.PURPURA_ORE.get());
         }
     }
 }
