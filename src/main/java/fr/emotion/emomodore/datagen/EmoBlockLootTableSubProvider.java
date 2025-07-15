@@ -17,10 +17,15 @@ public class EmoBlockLootTableSubProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        add(BlockRegistry.FOSSIL_ORE.get(), block -> createOreDrop(BlockRegistry.FOSSIL_ORE.get(), ItemRegistry.FOSSIL.get()));
+
+        add(BlockRegistry.PURPURA_ORE.get(), block -> createOreDrop(BlockRegistry.PURPURA_ORE.get(), ItemRegistry.PURPURA_SHARD.get()));
+        add(BlockRegistry.DEEPSLATE_PURPURA_ORE.get(), block -> createOreDrop(BlockRegistry.DEEPSLATE_PURPURA_ORE.get(), ItemRegistry.PURPURA_SHARD.get()));
         dropSelf(BlockRegistry.PURPURA_BLOCK.get());
 
-        add(BlockRegistry.FOSSIL_ORE.get(), block -> createOreDrop(BlockRegistry.FOSSIL_ORE.get(), ItemRegistry.FOSSIL.get()));
-        add(BlockRegistry.PURPURA_ORE.get(), block -> createOreDrop(BlockRegistry.PURPURA_ORE.get(), ItemRegistry.PURPURA_SHARD.get()));
+        dropWhenSilkTouch(BlockRegistry.VIRIDIS_ORE.get());
+        dropSelf(BlockRegistry.VIRIDIS_CRISTAL.get());
+        dropSelf(BlockRegistry.VIRIDIS_BLOCK.get());
     }
 
     @Override

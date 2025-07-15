@@ -61,10 +61,14 @@ public class MainRegistryClient {
         }
         else if (key == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(BlockRegistry.PURPURA_BLOCK.get());
+            event.accept(BlockRegistry.VIRIDIS_BLOCK.get());
         }
         else if (key == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(BlockRegistry.FOSSIL_ORE.get());
             event.accept(BlockRegistry.PURPURA_ORE.get());
+            event.accept(BlockRegistry.DEEPSLATE_PURPURA_ORE.get());
+            event.accept(BlockRegistry.VIRIDIS_ORE.get());
+            event.accept(BlockRegistry.VIRIDIS_CRISTAL.get());
         }
     }
 }

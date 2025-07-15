@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
-    "emomodore:purpura_block",
-    "emomodore:purpura_ore"
+    "emomodore:purpura_ore",
+    "emomodore:deepslate_purpura_ore",
+    "emomodore:purpura_block"
   ]
 }

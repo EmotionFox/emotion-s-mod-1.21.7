@@ -1,8 +1,12 @@
 {
   "replace": false,
   "values": [
+    "emomodore:fossil_ore",
     "emomodore:purpura_ore",
+    "emomodore:deepslate_purpura_ore",
     "emomodore:purpura_block",
-    "emomodore:fossil_ore"
+    "emomodore:viridis_ore",
+    "emomodore:viridis_cristal",
+    "emomodore:viridis_block"
   ]
 }

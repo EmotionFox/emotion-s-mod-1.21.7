@@ -46,5 +46,8 @@
   "item.emomodore.viridis_boots": "Viridis Boots",
 
   "item.emomodore.lume_stone": "Lume Stone",
-  "item.emomodore.fossil": "Fossil"
+  "item.emomodore.fossil": "Fossil",
+
+  "advancements.emomodore.mine_purpura.description": "Gather purpura",
+  "advancements.emomodore.mine_purpura.title": "Purpura?"
 }

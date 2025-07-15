@@ -1,3 +1,7 @@
 {
-  "values": []
+  "values": [
+    "emomodore:viridis_ore",
+    "emomodore:viridis_cristal",
+    "emomodore:viridis_block"
+  ]
 }

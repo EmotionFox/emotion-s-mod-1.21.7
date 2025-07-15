@@ -1,7 +1,12 @@
-// 1.21.7	2025-07-14T12:40:28.3614304	Model Definitions - emomodore
+// 1.21.7	2025-07-15T16:57:01.2282925	Model Definitions - emomodore
+7954505038a443ef0bf8eda9ef6dc19c1ba75c0f assets/emomodore/blockstates/deepslate_purpura_ore.json
 5364f207ccdfafbd206211dfd246351f50cba854 assets/emomodore/blockstates/fossil_ore.json
 32735e5082837c8754a8c1faf554b3b99a541abc assets/emomodore/blockstates/purpura_block.json
 54277ec0b3727032c768072abcadfbfd0a777752 assets/emomodore/blockstates/purpura_ore.json
+864c4950b4a72ffaad349e15430dec062364dca4 assets/emomodore/blockstates/viridis_block.json
+8aad359ec9e55d0b550b4f756cda6d58c03bac4f assets/emomodore/blockstates/viridis_cristal.json
+7a9cb86dfb1e8c8746a7dce5e68280435c5e0a36 assets/emomodore/blockstates/viridis_ore.json
+7f4585a9cb5d147cf38b4aafe71595ba59e2077e assets/emomodore/items/deepslate_purpura_ore.json
 7cd1df0e9a4a78c74a397cf34ec89d87d5f47816 assets/emomodore/items/fossil.json
 3e89498a9e364d141234c6294d14d0d6356eccb6 assets/emomodore/items/fossil_axe.json
 f027ba7280f099f43a7a0540cc317f83ef59ddcc assets/emomodore/items/fossil_hoe.json
@@ -17,9 +22,16 @@ a1369be2012acd65152c278274e2d9ae88478790 assets/emomodore/items/purpura_block.js
 40d72f2f8e57783302cdad9d1a09acdee786c058 assets/emomodore/items/purpura_shard.json
 e00fe6f774cb7a7d988be915b30aba3eb4d27499 assets/emomodore/items/purpura_shovel.json
 75719d72910bc7c06dade8c38fd2887211060661 assets/emomodore/items/purpura_sword.json
+c8d6b9cb7a0141b37e2bf6c1daa37c5cde3d628b assets/emomodore/items/viridis_block.json
+3599b109f9b18ff557f987cb460eaa5a87a46c0b assets/emomodore/items/viridis_cristal.json
+811aff7b4b792d0862e15a89e32036c29b14ac0f assets/emomodore/items/viridis_ore.json
+36d9ef101f77bf60ce0490b68ecc2c2473e08251 assets/emomodore/models/block/deepslate_purpura_ore.json
 7a7f53c3c6bd470bad285d771f9abc1fb52ebca6 assets/emomodore/models/block/fossil_ore.json
 fd8a884bc6090ca28e9464e4e005e70392630029 assets/emomodore/models/block/purpura_block.json
 cde173a6d42d8c68ad4eadbc8a97c93237a70f25 assets/emomodore/models/block/purpura_ore.json
+d3325be33bc2b1e694bf60b4ae11bfa7f781c76a assets/emomodore/models/block/viridis_block.json
+09bea8ba173de79a6169b27a5171b1e06833fbac assets/emomodore/models/block/viridis_cristal.json
+1445e3df6898740af6dda0958b5dfb35cb584195 assets/emomodore/models/block/viridis_ore.json
 52df3548f9e0e01b5a52f32bce3744dd31059c55 assets/emomodore/models/item/fossil.json
 3ab81b750b07b1810d74dc9b466ec961ed1d53f1 assets/emomodore/models/item/fossil_axe.json
 a21e408ad7508d38827ef4bb9fec9edadf8f7f68 assets/emomodore/models/item/fossil_hoe.json

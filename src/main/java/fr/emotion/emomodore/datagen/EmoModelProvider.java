@@ -23,14 +23,6 @@ public class EmoModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         // Items
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_SHARD.get(), ModelTemplates.FLAT_ITEM);
-
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_SWORD.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_SHOVEL.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_PICKAXE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_AXE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ItemRegistry.PURPURA_HOE.get(), ModelTemplates.FLAT_ITEM);
-
         itemModels.generateFlatItem(ItemRegistry.FOSSIL.get(), ModelTemplates.FLAT_ITEM);
 
         itemModels.generateFlatItem(ItemRegistry.FOSSIL_SWORD.get(), ModelTemplates.FLAT_ITEM);
@@ -39,11 +31,24 @@ public class EmoModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ItemRegistry.FOSSIL_AXE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ItemRegistry.FOSSIL_HOE.get(), ModelTemplates.FLAT_ITEM);
 
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_SHARD.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_SWORD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_SHOVEL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_PICKAXE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_AXE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.PURPURA_HOE.get(), ModelTemplates.FLAT_ITEM);
+
         // Blocks
         blockModels.createTrivialCube(BlockRegistry.FOSSIL_ORE.get());
 
         blockModels.createTrivialCube(BlockRegistry.PURPURA_ORE.get());
+        blockModels.createTrivialCube(BlockRegistry.DEEPSLATE_PURPURA_ORE.get());
         blockModels.createTrivialCube(BlockRegistry.PURPURA_BLOCK.get());
+
+        blockModels.createTrivialCube(BlockRegistry.VIRIDIS_ORE.get());
+        blockModels.createCrossBlock(BlockRegistry.VIRIDIS_CRISTAL.get(), BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModels.createTrivialCube(BlockRegistry.VIRIDIS_BLOCK.get());
     }
 
     @Override
