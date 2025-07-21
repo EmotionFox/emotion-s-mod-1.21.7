@@ -1,11 +1,11 @@
 {
-  "parent": "emomodore:story/mine_purpura",
+  "parent": "emomodore:mine_purpura",
   "criteria": {
     "viridis": {
       "conditions": {
         "items": [
           {
-            "items": "emomodore:viridis_cristal"
+            "items": "emomodore:viridis_crystal"
           }
         ]
       },
@@ -18,7 +18,7 @@
     },
     "icon": {
       "count": 1,
-      "id": "emomodore:viridis_cristal"
+      "id": "emomodore:viridis_crystal"
     },
     "title": {
       "translate": "advancements.emomodore.mine_viridis.title"

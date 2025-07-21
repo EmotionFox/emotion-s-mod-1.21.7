@@ -6,15 +6,15 @@ import fr.emotion.emomodore.advancements.MineViridis;
 import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.List;
 import java.util.Set;
 
-@EventBusSubscriber(modid = MainRegistry.MODID, value = Dist.DEDICATED_SERVER)
+@EventBusSubscriber(modid = MainRegistry.MODID)
 public class ServerDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Server event) {
@@ -32,5 +32,13 @@ public class ServerDataGenerators {
         ));
 
         event.createProvider(EmoRecipeProvider.Runner::new);
+
+        event.createProvider((output, lookupProvider) ->
+                new DatapackBuiltinEntriesProvider(
+                        output,
+                        lookupProvider,
+                        EmoSetBuilder.createBuilder(),
+                        Set.of(MainRegistry.MODID))
+        );
     }
 }

@@ -6,6 +6,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Set;
@@ -24,8 +25,11 @@ public class EmoBlockLootTableSubProvider extends BlockLootSubProvider {
         dropSelf(BlockRegistry.PURPURA_BLOCK.get());
 
         dropWhenSilkTouch(BlockRegistry.VIRIDIS_ORE.get());
-        dropSelf(BlockRegistry.VIRIDIS_CRISTAL.get());
+        dropSelf(BlockRegistry.VIRIDIS_CRYSTAL.get());
         dropSelf(BlockRegistry.VIRIDIS_BLOCK.get());
+
+        add(BlockRegistry.NETHER_LUME_ORE.get(), block -> createOreDrop(BlockRegistry.NETHER_LUME_ORE.get(), ItemRegistry.LUME_STONE.get()));
+        dropSelf(BlockRegistry.LUME_BLOCK.get());
     }
 
     @Override

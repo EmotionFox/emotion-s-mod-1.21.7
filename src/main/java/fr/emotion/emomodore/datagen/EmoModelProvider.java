@@ -6,7 +6,6 @@ import fr.emotion.emomodore.init.ItemRegistry;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
@@ -39,6 +38,13 @@ public class EmoModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ItemRegistry.PURPURA_AXE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ItemRegistry.PURPURA_HOE.get(), ModelTemplates.FLAT_ITEM);
 
+        itemModels.generateFlatItem(ItemRegistry.VIRIDIS_HELMET.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.VIRIDIS_CHESTPLATE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.VIRIDIS_LEGGINGS.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ItemRegistry.VIRIDIS_BOOTS.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ItemRegistry.LUME_STONE.get(), ModelTemplates.FLAT_ITEM);
+
         // Blocks
         blockModels.createTrivialCube(BlockRegistry.FOSSIL_ORE.get());
 
@@ -47,8 +53,11 @@ public class EmoModelProvider extends ModelProvider {
         blockModels.createTrivialCube(BlockRegistry.PURPURA_BLOCK.get());
 
         blockModels.createTrivialCube(BlockRegistry.VIRIDIS_ORE.get());
-        blockModels.createCrossBlock(BlockRegistry.VIRIDIS_CRISTAL.get(), BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModels.createCrossBlock(BlockRegistry.VIRIDIS_CRYSTAL.get(), BlockModelGenerators.PlantType.NOT_TINTED);
         blockModels.createTrivialCube(BlockRegistry.VIRIDIS_BLOCK.get());
+
+        blockModels.createTrivialCube(BlockRegistry.NETHER_LUME_ORE.get());
+        blockModels.createTrivialCube(BlockRegistry.LUME_BLOCK.get());
     }
 
     @Override

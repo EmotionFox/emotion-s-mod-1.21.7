@@ -2,16 +2,31 @@ package fr.emotion.emomodore;
 
 import fr.emotion.emomodore.init.BlockRegistry;
 import fr.emotion.emomodore.init.ItemRegistry;
+import fr.emotion.emomodore.models.ViridisHumanoidArmorModel;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.Model;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
+import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -21,6 +36,9 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 @EventBusSubscriber(modid = MainRegistry.MODID, value = Dist.CLIENT)
 public class MainRegistryClient {
+    public static final ModelLayerLocation VIRIDIS_OUTER_ARMOR = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(MainRegistry.MODID, "viridis_armor"), "main");
+    public static final ModelLayerLocation VIRIDIS_INNER_ARMOR = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(MainRegistry.MODID, "viridis_armor"), "main");
+
     public MainRegistryClient(ModContainer container) {
         // Allows NeoForge to create a config screen for this mod's configs.
         // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
@@ -33,6 +51,39 @@ public class MainRegistryClient {
         // Some client setup code
         MainRegistry.LOGGER.info("HELLO FROM CLIENT SETUP");
         MainRegistry.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+        ItemBlockRenderTypes.setRenderLayer(BlockRegistry.VIRIDIS_CRYSTAL.get(), ChunkSectionLayer.CUTOUT);
+    }
+
+    @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(VIRIDIS_OUTER_ARMOR, () -> ViridisHumanoidArmorModel.createLayer(new CubeDeformation(1.0F)));
+        event.registerLayerDefinition(VIRIDIS_INNER_ARMOR, () -> ViridisHumanoidArmorModel.createLayer(new CubeDeformation(0.5F)));
+    }
+
+    @SubscribeEvent
+    public static void onRegisterClientExtensions(RegisterClientExtensionsEvent event) {
+        event.registerItem(new IClientItemExtensions() {
+            private ViridisHumanoidArmorModel<HumanoidRenderState> model;
+
+            @Override
+            public Model getHumanoidArmorModel(ItemStack itemStack, EquipmentClientInfo.LayerType layerType, Model original) {
+                ModelPart part = Minecraft.getInstance().getEntityModels().bakeLayer(VIRIDIS_INNER_ARMOR);
+                model = new ViridisHumanoidArmorModel<>(part);
+                return model;
+            }
+        }, ItemRegistry.VIRIDIS_HELMET, ItemRegistry.VIRIDIS_CHESTPLATE, ItemRegistry.VIRIDIS_BOOTS);
+
+        event.registerItem(new IClientItemExtensions() {
+            private ViridisHumanoidArmorModel<HumanoidRenderState> model;
+
+            @Override
+            public Model getHumanoidArmorModel(ItemStack itemStack, EquipmentClientInfo.LayerType layerType, Model original) {
+                ModelPart part = Minecraft.getInstance().getEntityModels().bakeLayer(VIRIDIS_OUTER_ARMOR);
+                model = new ViridisHumanoidArmorModel<>(part);
+                return model;
+            }
+        }, ItemRegistry.VIRIDIS_LEGGINGS);
     }
 
     @SubscribeEvent
@@ -51,6 +102,11 @@ public class MainRegistryClient {
             event.accept(ItemRegistry.FOSSIL_SHOVEL.get());
             event.accept(ItemRegistry.FOSSIL_PICKAXE.get());
             event.accept(ItemRegistry.FOSSIL_HOE.get());
+
+            event.accept(ItemRegistry.VIRIDIS_HELMET.get());
+            event.accept(ItemRegistry.VIRIDIS_CHESTPLATE.get());
+            event.accept(ItemRegistry.VIRIDIS_LEGGINGS.get());
+            event.accept(ItemRegistry.VIRIDIS_BOOTS.get());
         }
         else if (key == CreativeModeTabs.COMBAT) {
             event.accept(ItemRegistry.PURPURA_SWORD.get());
@@ -62,13 +118,15 @@ public class MainRegistryClient {
         else if (key == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(BlockRegistry.PURPURA_BLOCK.get());
             event.accept(BlockRegistry.VIRIDIS_BLOCK.get());
+            event.accept(BlockRegistry.LUME_BLOCK.get());
         }
         else if (key == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(BlockRegistry.FOSSIL_ORE.get());
             event.accept(BlockRegistry.PURPURA_ORE.get());
             event.accept(BlockRegistry.DEEPSLATE_PURPURA_ORE.get());
             event.accept(BlockRegistry.VIRIDIS_ORE.get());
-            event.accept(BlockRegistry.VIRIDIS_CRISTAL.get());
+            event.accept(BlockRegistry.VIRIDIS_CRYSTAL.get());
+            event.accept(BlockRegistry.NETHER_LUME_ORE.get());
         }
     }
 }

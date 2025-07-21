@@ -21,6 +21,7 @@ public class EmoRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         buildTools();
+        buildArmors();
 
         oreBlasting(List.of(BlockRegistry.FOSSIL_ORE.get()), RecipeCategory.MISC, ItemRegistry.FOSSIL, 0.7F, 100, "fossil");
         oreSmelting(List.of(BlockRegistry.FOSSIL_ORE.get()), RecipeCategory.MISC, ItemRegistry.FOSSIL, 0.7F, 200, "fossil");
@@ -28,12 +29,44 @@ public class EmoRecipeProvider extends RecipeProvider {
         oreBlasting(List.of(BlockRegistry.PURPURA_ORE.get(), BlockRegistry.DEEPSLATE_PURPURA_ORE.get()), RecipeCategory.MISC, ItemRegistry.PURPURA_SHARD, 1.0F, 100, "purpura");
         oreSmelting(List.of(BlockRegistry.PURPURA_ORE.get(), BlockRegistry.DEEPSLATE_PURPURA_ORE.get()), RecipeCategory.MISC, ItemRegistry.PURPURA_SHARD, 1.0F, 200, "purpura");
 
+        oreBlasting(List.of(BlockRegistry.VIRIDIS_ORE.get()), RecipeCategory.MISC, BlockRegistry.VIRIDIS_CRYSTAL, 1.0F, 100, "viridis");
+        oreSmelting(List.of(BlockRegistry.VIRIDIS_ORE.get()), RecipeCategory.MISC, BlockRegistry.VIRIDIS_CRYSTAL, 1.0F, 200, "viridis");
+
+        oreBlasting(List.of(BlockRegistry.NETHER_LUME_ORE.get()), RecipeCategory.MISC, ItemRegistry.LUME_STONE, 1.0F, 100, "lume");
+        oreSmelting(List.of(BlockRegistry.NETHER_LUME_ORE.get()), RecipeCategory.MISC, ItemRegistry.LUME_STONE, 1.0F, 200, "lume");
+
         shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.PURPURA_BLOCK.get())
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
                 .define('#', ItemRegistry.PURPURA_SHARD)
                 .unlockedBy("has_purpura", has(ItemRegistry.PURPURA_SHARD)).save(output);
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.PURPURA_SHARD,9)
+                .requires(BlockRegistry.PURPURA_BLOCK)
+                .unlockedBy("has_purpura", has(ItemRegistry.PURPURA_SHARD)).save(output);
+
+        shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.VIRIDIS_BLOCK.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', BlockRegistry.VIRIDIS_CRYSTAL)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_CRYSTAL)).save(output);
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.VIRIDIS_CRYSTAL,9)
+                .requires(BlockRegistry.VIRIDIS_BLOCK)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_CRYSTAL)).save(output);
+
+        shaped(RecipeCategory.BUILDING_BLOCKS, BlockRegistry.LUME_BLOCK.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ItemRegistry.LUME_STONE)
+                .unlockedBy("has_lume", has(ItemRegistry.LUME_STONE)).save(output);
+
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.LUME_STONE,9)
+                .requires(BlockRegistry.LUME_BLOCK)
+                .unlockedBy("has_lume", has(ItemRegistry.LUME_STONE)).save(output);
     }
 
     protected void buildTools(){
@@ -120,6 +153,33 @@ public class EmoRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_fossil", has(ItemRegistry.FOSSIL)).save(output);
     }
 
+    protected void buildArmors() {
+        shaped(RecipeCategory.TOOLS, ItemRegistry.VIRIDIS_HELMET.get())
+                .pattern("XXX")
+                .pattern("X X")
+                .define('X', BlockRegistry.VIRIDIS_CRYSTAL)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_BLOCK)).save(output);
+
+        shaped(RecipeCategory.TOOLS, ItemRegistry.VIRIDIS_CHESTPLATE.get())
+                .pattern("X X")
+                .pattern("XXX")
+                .pattern("XXX")
+                .define('X', BlockRegistry.VIRIDIS_CRYSTAL)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_BLOCK)).save(output);
+
+        shaped(RecipeCategory.TOOLS, ItemRegistry.VIRIDIS_LEGGINGS.get())
+                .pattern("XXX")
+                .pattern("X X")
+                .pattern("X X")
+                .define('X', BlockRegistry.VIRIDIS_CRYSTAL)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_BLOCK)).save(output);
+
+        shaped(RecipeCategory.TOOLS, ItemRegistry.VIRIDIS_BOOTS.get())
+                .pattern("X X")
+                .pattern("X X")
+                .define('X', BlockRegistry.VIRIDIS_CRYSTAL)
+                .unlockedBy("has_viridis", has(BlockRegistry.VIRIDIS_BLOCK)).save(output);
+    }
 
     public static class Runner extends RecipeProvider.Runner {
         protected Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
