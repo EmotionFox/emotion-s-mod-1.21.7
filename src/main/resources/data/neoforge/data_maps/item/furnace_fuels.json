@@ -1,0 +1,10 @@
+{
+	"values": {
+		"emomodore:lume_stone": {
+			"burn_time": 3200
+		},
+		"emomodore:lume_block": {
+			"burn_time": 32000
+		}
+	}
+}

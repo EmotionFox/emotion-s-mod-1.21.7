@@ -91,42 +91,42 @@ public class MainRegistryClient {
         ResourceKey<CreativeModeTab> key = event.getTabKey();
 
         if (key == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ItemRegistry.PURPURA_SHARD.get());
-            event.accept(ItemRegistry.FOSSIL.get());
+            event.accept(ItemRegistry.FOSSIL);
+            event.accept(ItemRegistry.PURPURA_SHARD);
+            event.accept(ItemRegistry.LUME_STONE);
         }
         else if (key == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ItemRegistry.PURPURA_SHOVEL.get());
-            event.accept(ItemRegistry.PURPURA_PICKAXE.get());
-            event.accept(ItemRegistry.PURPURA_HOE.get());
+            event.accept(ItemRegistry.PURPURA_SHOVEL);
+            event.accept(ItemRegistry.PURPURA_PICKAXE);
+            event.accept(ItemRegistry.PURPURA_HOE);
 
-            event.accept(ItemRegistry.FOSSIL_SHOVEL.get());
-            event.accept(ItemRegistry.FOSSIL_PICKAXE.get());
-            event.accept(ItemRegistry.FOSSIL_HOE.get());
+            event.accept(ItemRegistry.FOSSIL_SHOVEL);
+            event.accept(ItemRegistry.FOSSIL_PICKAXE);
+            event.accept(ItemRegistry.FOSSIL_HOE);
 
-            event.accept(ItemRegistry.VIRIDIS_HELMET.get());
-            event.accept(ItemRegistry.VIRIDIS_CHESTPLATE.get());
-            event.accept(ItemRegistry.VIRIDIS_LEGGINGS.get());
-            event.accept(ItemRegistry.VIRIDIS_BOOTS.get());
+            event.accept(ItemRegistry.VIRIDIS_HELMET);
+            event.accept(ItemRegistry.VIRIDIS_CHESTPLATE);
+            event.accept(ItemRegistry.VIRIDIS_LEGGINGS);
+            event.accept(ItemRegistry.VIRIDIS_BOOTS);
         }
         else if (key == CreativeModeTabs.COMBAT) {
-            event.accept(ItemRegistry.PURPURA_SWORD.get());
-            event.accept(ItemRegistry.PURPURA_AXE.get());
-
-            event.accept(ItemRegistry.FOSSIL_SWORD.get());
-            event.accept(ItemRegistry.FOSSIL_AXE.get());
+            event.accept(ItemRegistry.PURPURA_SWORD);
+            event.accept(ItemRegistry.PURPURA_AXE);
+            event.accept(ItemRegistry.FOSSIL_SWORD);
+            event.accept(ItemRegistry.FOSSIL_AXE);
         }
         else if (key == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(BlockRegistry.PURPURA_BLOCK.get());
-            event.accept(BlockRegistry.VIRIDIS_BLOCK.get());
-            event.accept(BlockRegistry.LUME_BLOCK.get());
+            event.accept(BlockRegistry.PURPURA_BLOCK);
+            event.accept(BlockRegistry.VIRIDIS_BLOCK);
+            event.accept(BlockRegistry.LUME_BLOCK);
         }
         else if (key == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(BlockRegistry.FOSSIL_ORE.get());
-            event.accept(BlockRegistry.PURPURA_ORE.get());
-            event.accept(BlockRegistry.DEEPSLATE_PURPURA_ORE.get());
-            event.accept(BlockRegistry.VIRIDIS_ORE.get());
-            event.accept(BlockRegistry.VIRIDIS_CRYSTAL.get());
-            event.accept(BlockRegistry.NETHER_LUME_ORE.get());
+            event.accept(BlockRegistry.FOSSIL_ORE);
+            event.accept(BlockRegistry.PURPURA_ORE);
+            event.accept(BlockRegistry.DEEPSLATE_PURPURA_ORE);
+            event.accept(BlockRegistry.VIRIDIS_ORE);
+            event.accept(BlockRegistry.VIRIDIS_CRYSTAL);
+            event.accept(BlockRegistry.NETHER_LUME_ORE);
         }
     }
 }

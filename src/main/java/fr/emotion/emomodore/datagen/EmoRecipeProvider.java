@@ -4,10 +4,13 @@ import fr.emotion.emomodore.MainRegistry;
 import fr.emotion.emomodore.init.BlockRegistry;
 import fr.emotion.emomodore.init.ItemRegistry;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.data.Main;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 
 import java.util.List;
@@ -67,6 +70,13 @@ public class EmoRecipeProvider extends RecipeProvider {
         shapeless(RecipeCategory.BUILDING_BLOCKS, ItemRegistry.LUME_STONE,9)
                 .requires(BlockRegistry.LUME_BLOCK)
                 .unlockedBy("has_lume", has(ItemRegistry.LUME_STONE)).save(output);
+
+        shaped(RecipeCategory.MISC, Items.TORCH, 8)
+                .pattern("#")
+                .pattern("X")
+                .define('#', ItemRegistry.LUME_STONE)
+                .define('X', Items.STICK)
+                .unlockedBy("has_lume", has(ItemRegistry.LUME_STONE)).save(output, "lume_torch");
     }
 
     protected void buildTools(){

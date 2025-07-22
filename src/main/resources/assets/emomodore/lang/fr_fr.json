@@ -36,9 +36,14 @@
   "item.emomodore.purpura_shovel": "Pelle en purpura",
   "item.emomodore.purpura_sword": "Épée en purpura",
 
-  "item.emomodore.purpura_diamond_sword": "Épée en purpura incrusté de diamant",
-  "item.emomodore.purpura_lume_sword": "Épée en purpura incrusté de lume",
-  "item.emomodore.purpura_gold_sword": "Épée en purpura incrusté d'or",
+  "item.emomodore.purpura_lume_sword": "Épée en purpura incrustée de lume",
+
+  "item.emomodore.purpura_netherite_sword": "Épée en purpura incrustée de netherite",
+  "item.emomodore.purpura_diamond_sword": "Épée en purpura incrustée de diamant",
+  "item.emomodore.purpura_emerald_sword": "Épée en purpura incrustée d'émeraude",
+  "item.emomodore.purpura_gold_sword": "Épée en purpura incrustée d'or",
+  "item.emomodore.purpura_iron_sword": "Épée en purpura incrustée de fer",
+  "item.emomodore.purpura_copper_sword": "Épée en purpura incrustée de cuivre",
 
   "item.emomodore.viridis_crystal": "Viridis Cristal",
 

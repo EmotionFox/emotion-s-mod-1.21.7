@@ -36,9 +36,14 @@
   "item.emomodore.purpura_shovel": "Purpura Shovel",
   "item.emomodore.purpura_sword": "Purpura Sword",
 
-  "item.emomodore.purpura_diamond_sword": "Purpura Diamond-Encrusted Sword",
-  "item.emomodore.purpura_lume_sword": "Purpura Lume-Encrusted Sword",
-  "item.emomodore.purpura_gold_sword": "Purpura Gold-Encrusted Sword",
+  "item.emomodore.purpura_lume_sword": "Lume-Inlaid Purpura Sword",
+
+  "item.emomodore.purpura_netherite_sword": "Netherite-Inlaid Purpura Sword",
+  "item.emomodore.purpura_diamond_sword": "Diamond-Inlaid Purpura Sword",
+  "item.emomodore.purpura_emerald_sword": "Emerald-Inlaid Purpura Sword",
+  "item.emomodore.purpura_gold_sword": "Gold-Inlaid Purpura Sword",
+  "item.emomodore.purpura_iron_sword": "Iron-Inlaid Purpura Sword",
+  "item.emomodore.purpura_copper_sword": "Copper-Inlaid Purpura Sword",
 
   "item.emomodore.viridis_crystal": "Viridis Crystal",
 

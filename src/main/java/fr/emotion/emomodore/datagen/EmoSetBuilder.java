@@ -170,9 +170,9 @@ public class EmoSetBuilder {
                     bootstrap.register(
                             LUME_NETHER_ORE_CONFIGURED_FEATURE,
                             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(
-                                    new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES),
+                                    new BlockMatchTest(Blocks.NETHERRACK),
                                     BlockRegistry.NETHER_LUME_ORE.get().defaultBlockState(),
-                                    4))
+                                    8))
                     );
                 })
                 .add(Registries.PLACED_FEATURE, bootstrap -> {

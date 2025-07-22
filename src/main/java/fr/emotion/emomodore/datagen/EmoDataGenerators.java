@@ -15,7 +15,35 @@ import java.util.List;
 import java.util.Set;
 
 @EventBusSubscriber(modid = MainRegistry.MODID)
-public class ServerDataGenerators {
+public class EmoDataGenerators {
+    @SubscribeEvent
+    public static void gatherData(GatherDataEvent.Client event) {
+        event.createProvider(EmoModelProvider::new);
+
+        event.createProvider((output, lookupProvider) -> new AdvancementProvider(
+                output,
+                lookupProvider,
+                List.of(MinePurpura::generate, MineViridis::generate)
+        ));
+
+        event.createProvider((output, lookupProvider) -> new LootTableProvider(
+                output,
+                Set.of(),
+                List.of(new LootTableProvider.SubProviderEntry(EmoBlockLootTableSubProvider::new, LootContextParamSets.BLOCK)),
+                lookupProvider
+        ));
+
+        event.createProvider(EmoRecipeProvider.Runner::new);
+
+        event.createProvider((output, lookupProvider) ->
+                new DatapackBuiltinEntriesProvider(
+                        output,
+                        lookupProvider,
+                        EmoSetBuilder.createBuilder(),
+                        Set.of(MainRegistry.MODID))
+        );
+    }
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Server event) {
         event.createProvider((output, lookupProvider) -> new AdvancementProvider(
